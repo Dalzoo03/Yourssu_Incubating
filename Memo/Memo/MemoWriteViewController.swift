@@ -19,11 +19,15 @@ class MemoWriteViewController : UIViewController {
     private let titleTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "제목 입력"
+        textField.borderStyle = .roundedRect
         return textField
     }()
     
     private let contentTextView: UITextView = {
         let textView = UITextView()
+        textView.backgroundColor = .gray
+        textView.layer.borderWidth = 1.0
+        textView.layer.cornerRadius = 5.0
         textView.layer.borderColor = UIColor.systemGray.cgColor
         return textView
     }()
